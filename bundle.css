@@ -1,0 +1,54 @@
+.Filter {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: 1px rgb(235, 224, 75) solid;
+  background-color: rgb(249, 249, 182);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Filter .List {
+  width: 250px;
+}
+
+.List .Input-text{
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.List .Textarea{
+  width: 250px;
+  height: 150px;
+  font-size: 20px;
+}
+
+.Filter .Reset {
+  width: 80px;
+  padding: 5px 7px;
+  background-color: rgb(188, 225, 245);
+  border: 1px rgb(159, 209, 239) solid;
+  border-radius: 5px;
+}
+
+.Filter .Reset:hover{
+  box-shadow: 5px 5px 5px rgb(186, 184, 197) inset;
+  color: rgb(9, 63, 96);
+}
+
+.Filter .Reset:active{
+  box-shadow: 0px 0px 5px rgb(80, 80, 90) inset;
+}
+
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=bundle.css.map*/
