@@ -8,6 +8,7 @@ class Filter extends React.Component {
     list: this.props.arrList,
     selected: false,
     filterText: "",
+    
   };
 
   checkboxChange = eo => {
@@ -37,9 +38,9 @@ class Filter extends React.Component {
   render() {
     return (
       <div className='Filter'>
-        <input type = "checkbox" className ='Checkbox' onChange = {this.checkboxChange} /> 
+        <input type = "checkbox" className ='Checkbox' checked = {this.state.selected} onChange = {this.checkboxChange} /> 
         <div className='List'>
-         <input type = "text" className ='Input-text' onChange = {this.inputChange} />
+         <input type = "text" className ='Input-text' value={this.state.filterText} onChange = {this.inputChange} />
          <textarea className ='Textarea' value= {this.state.list.join("\n")}></textarea>
         </div>
         <input type="button" className ='Reset' value = "Reset" onClick={this.reset}/>

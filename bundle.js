@@ -30508,6 +30508,7 @@ var Filter = function (_React$Component) {
       list: _this.props.arrList,
       selected: false,
       filterText: ""
+
     }, _this.checkboxChange = function (eo) {
       _this.setState({ selected: eo.target.checked }, _this.applySorting);
     }, _this.inputChange = function (eo) {
@@ -30535,11 +30536,11 @@ var Filter = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'Filter' },
-        _react2.default.createElement('input', { type: 'checkbox', className: 'Checkbox', onChange: this.checkboxChange }),
+        _react2.default.createElement('input', { type: 'checkbox', className: 'Checkbox', checked: this.state.selected, onChange: this.checkboxChange }),
         _react2.default.createElement(
           'div',
           { className: 'List' },
-          _react2.default.createElement('input', { type: 'text', className: 'Input-text', onChange: this.inputChange }),
+          _react2.default.createElement('input', { type: 'text', className: 'Input-text', value: this.state.filterText, onChange: this.inputChange }),
           _react2.default.createElement('textarea', { className: 'Textarea', value: this.state.list.join("\n") })
         ),
         _react2.default.createElement('input', { type: 'button', className: 'Reset', value: 'Reset', onClick: this.reset })
