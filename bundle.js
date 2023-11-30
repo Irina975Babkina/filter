@@ -30515,7 +30515,6 @@ var Filter = function (_React$Component) {
       _this.setState({ filterText: eo.target.value }, _this.applySorting);
     }, _this.reset = function (eo) {
       _this.setState({ selected: false, filterText: "" }, _this.applySorting);
-      console.log(_this.state.selected, _this.state.filterText);
     }, _this.applySorting = function () {
       var newList = _this.props.arrList.slice(0);
       if (_this.state.filterText) {
@@ -30541,7 +30540,7 @@ var Filter = function (_React$Component) {
           'div',
           { className: 'List' },
           _react2.default.createElement('input', { type: 'text', className: 'Input-text', value: this.state.filterText, onChange: this.inputChange }),
-          _react2.default.createElement('textarea', { className: 'Textarea', value: this.state.list.join("\n") })
+          _react2.default.createElement('textarea', { className: 'Textarea', value: this.state.list.join("\n"), onChange: this.inputChange })
         ),
         _react2.default.createElement('input', { type: 'button', className: 'Reset', value: 'Reset', onClick: this.reset })
       );
